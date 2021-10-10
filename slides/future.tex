@@ -1,0 +1,65 @@
+% !TeX root = future.tex
+
+\documentclass[14pt]{beamer}
+
+\usetheme{default}
+%\usetheme{Copenhagen}
+%\usetheme{Warsaw}
+%\usepackage{fontspec} 
+%\defaultfontfeatures{Mapping=tex-text} 
+%\setsansfont[Ligatures={Common}]{Futura}
+%\setmonofont[Scale=0.8]{Monaco} 
+
+%\usefonttheme[onlymath]{serif}
+%\usefonttheme{professionalfonts}
+%\usefonttheme{serif}
+\beamertemplatenavigationsymbolsempty
+\hypersetup{pdfpagemode=UseNone} % don't show bookmarks on initial view
+
+\definecolor{title}{RGB}{40,60,155}
+\definecolor{foreground}{RGB}{230,170,80}
+\definecolor{background}{RGB}{24,24,24}
+\definecolor{gray}{RGB}{180,180,160}
+\definecolor{subbub}{RGB}{180,180,200}
+\definecolor{subtitle}{RGB}{220,200,70}
+\definecolor{hilight}{RGB}{102,255,204}
+\definecolor{vhilight}{RGB}{255,111,207}
+
+\setbeamercolor{titlelike}{fg=title}
+\setbeamercolor{subtitle}{fg=title}
+\setbeamercolor{institute}{fg=gray}
+\setbeamercolor{normal text}{fg=gray,bg=background}
+
+\setbeamercolor{item}{fg=foreground} % color of bullets
+\setbeamercolor{subitem}{fg=foreground}
+\setbeamercolor{itemize/enumerate subbody}{fg=subbub}
+\setbeamertemplate{itemize subitem}{{\textendash}}
+\setbeamerfont{itemize/enumerate subbody}{size=\footnotesize}
+\setbeamerfont{itemize/enumerate subitem}{size=\footnotesize}
+
+%slide number in the lower-right
+\setbeamertemplate{footline}{%
+	\raisebox{5pt}{\makebox[\paperwidth]{\hfill\makebox[20pt]{\color{gray}
+				\scriptsize\insertframenumber}}}\hspace*{5pt}}
+\addtobeamertemplate{note page}{\setlength{\parskip}{12pt}}
+
+\include{preamble}
+
+\title{Starting out in Information Security in a World Gone Cloudy}
+\author{Franklin Diaz}
+%\institute{Palo Alto Networks}
+\date{\today}
+
+\begin{document}
+
+\section{Some Big Ideas}
+
+\begin{frame}
+\frametitle{Decoherence}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{frame}
+
+\section{Live Demo}
+
+
+\end{document}
