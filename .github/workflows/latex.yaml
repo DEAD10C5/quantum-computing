@@ -1,0 +1,15 @@
+name: Build Quantum Talk Slides
+on:
+  - pull_request
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: presentation
+          root_file: future.tex
+          args: '-pdf -file-line-error -interaction=nonstopmode -shell-escape'
