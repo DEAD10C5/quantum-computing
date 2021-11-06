@@ -1,65 +1,122 @@
 % !TeX root = future.tex
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_US
 
-\documentclass[14pt]{beamer}
-
-\usetheme{default}
-%\usetheme{Copenhagen}
-%\usetheme{Warsaw}
-%\usepackage{fontspec} 
-%\defaultfontfeatures{Mapping=tex-text} 
-%\setsansfont[Ligatures={Common}]{Futura}
-%\setmonofont[Scale=0.8]{Monaco} 
-
-%\usefonttheme[onlymath]{serif}
-%\usefonttheme{professionalfonts}
-%\usefonttheme{serif}
-\beamertemplatenavigationsymbolsempty
-\hypersetup{pdfpagemode=UseNone} % don't show bookmarks on initial view
-
-\definecolor{title}{RGB}{40,60,155}
-\definecolor{foreground}{RGB}{230,170,80}
-\definecolor{background}{RGB}{24,24,24}
-\definecolor{gray}{RGB}{180,180,160}
-\definecolor{subbub}{RGB}{180,180,200}
-\definecolor{subtitle}{RGB}{220,200,70}
-\definecolor{hilight}{RGB}{102,255,204}
-\definecolor{vhilight}{RGB}{255,111,207}
-
-\setbeamercolor{titlelike}{fg=title}
-\setbeamercolor{subtitle}{fg=title}
-\setbeamercolor{institute}{fg=gray}
-\setbeamercolor{normal text}{fg=gray,bg=background}
-
-\setbeamercolor{item}{fg=foreground} % color of bullets
-\setbeamercolor{subitem}{fg=foreground}
-\setbeamercolor{itemize/enumerate subbody}{fg=subbub}
-\setbeamertemplate{itemize subitem}{{\textendash}}
-\setbeamerfont{itemize/enumerate subbody}{size=\footnotesize}
-\setbeamerfont{itemize/enumerate subitem}{size=\footnotesize}
-
-%slide number in the lower-right
-\setbeamertemplate{footline}{%
-	\raisebox{5pt}{\makebox[\paperwidth]{\hfill\makebox[20pt]{\color{gray}
-				\scriptsize\insertframenumber}}}\hspace*{5pt}}
-\addtobeamertemplate{note page}{\setlength{\parskip}{12pt}}
+%\documentclass[14pt]{beamer}
+\documentclass[aspectratio=169]{beamer} % Other possible values are: 1610, 149, 54, 43 and 32. By default, it is to 128mm by 96mm(4:3)
 
 \include{preamble}
 
-\title{Starting out in Information Security in a World Gone Cloudy}
-\author{Franklin Diaz}
-%\institute{Palo Alto Networks}
-\date{\today}
+% Table of Contents at Section start
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{\bfseries\Huge\textcolor{black}{.}}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
 
 \begin{document}
 
-\section{Some Big Ideas}
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{../images/tree-5939865_1280.jpg}}
+\section{Introduction}
+%\note{Image \href{https://pixabay.com/users/aalmeidah-4277022}{aalmeidah from Pixabay}}
+
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{../images/field-1728099.jpg}}
+\begin{frame}{}
+	\setlength{\TPHorizModule}{\textwidth}
+	\setlength{\TPVertModule}{\textwidth}
+	% Slide title in upper left
+	\begin{textblock}{0.74}(0.05,0.05)
+		\bfseries\large\normalcolor{introduction}
+	\end{textblock}
+	% main body bullet points
+	\begin{itemize}
+		\item A bit of math.
+		\item Some of the major players.
+	\end{itemize}
+\end{frame}
+%\note{This is a note.}
+
+% concepts
+\begin{frame}
+	\frametitle{Vectors and Matrices}
+    Vectors are ``columns''
+\end{frame}
+%\note{This is a note.}
+
+%
+\begin{frame}
+    \frametitle{Qubits}
+    \begin{itemize}
+    \item Spin
+    \item Trapped Atoms and Ions
+    \item Photons
+    \item Superconducting Circuits\
+	\end{itemize}
+\end{frame}
+\note{This is a note. https://uwaterloo.ca/institute-for-quantum-computing/quantum-101/quantum-information-science-and-technology/what-qubit}
 
 \begin{frame}
-\frametitle{Decoherence}
+	\frametitle{Some Quick Notation}
+    \begin{itemize}
+	\item The Greek letter Psi \begin{math}\Psi\end{math}
+    \item Dirac notation, including ``bra'' \begin{math}\bra{0}\end{math} and ``ket'' \begin{math}\ket{0}\end{math}
+	\item You might see Psi in a ``ket'' like so \begin{math}\ket{\Psi}\end{math}
+    \end{itemize}
+
+\end{frame}
+%\note{This is a note.}
+
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{../images/tree-5939865_1280.jpg}}
+\section{The State of Things}
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{../images/field-1728099.jpg}}
+
+\begin{frame}
+    \frametitle{Quantum Supremacy}
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+\end{frame}
+%\note{This is a note.}
+
+\begin{frame}
+\frametitle{Quantum KDCs}
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 \end{frame}
+%\note{This is a note.}
 
-\section{Live Demo}
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{../images/tree-5939865_1280.jpg}}
+\section{Commercial Efforts}
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{../images/field-1728099.jpg}}
+\begin{frame}{}
+    \frametitle{Google}
+     \begin{itemize}
+         \item \href{https://quantumai.google/cirq/tutorials}{so many free resources!}
+         \item \href{https://www.youtube.com/watch?v=16ZfkPRVf2w}{The ``cirq'' module for Python.}
+     \end{itemize}
+\end{frame}
+%\note{This is a note.}
 
+\begin{frame}{}
+    \frametitle{DWave}
+    \begin{itemize}
+        \item What is cirq?
+    \end{itemize}
+\end{frame}
+%\note{This is a note.}
 
+\begin{frame}{}
+    \frametitle{IBM}
+    \begin{itemize}
+        \item \href{https://www.youtube.com/watch?v=o-FyH2A7Ed0}{Souds of IBM Quantum}
+    \end{itemize}
+\end{frame}
+%\note{This is a note.}
+
+\begin{frame}{}
+    \frametitle{Amazon}
+    \begin{itemize}
+        \item amazon-braket-sdk
+    \end{itemize}
+\end{frame}
+%\note{This is a note.}
 \end{document}
