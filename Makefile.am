@@ -1,12 +1,13 @@
-.PHONY: slides
+CLOCAL_AMFLAGS = -I config/m4 -I aclocal
+ACLOCAL_AMFLAGS = -I config/m4 -I aclocal
 
-slides: ## Generate the PDF of slide deck
+slides:
 	python3 -m venv _build
 	. ./_build/bin/activate
 	python3 -m pip install -rrequirements.txt
 	cd slides && latexmk -pdf -synctex=1 -shell-escape future
 
-clean: ## clean everything up
+clean:
 	@find . -name '*.pyc' | xargs rm -rf
 	@find . -name '__pycache__' | xargs rm -rf
 	@for trash in *.aux *.bbl *.blg *.lof *.log *.lot *.out *.pdf *.synctex.gz *.toc ; do \
