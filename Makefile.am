@@ -18,3 +18,21 @@ clean:
 			rm book/backmatter/$$trash ; \
 		fi ; \
 	done
+
+python:
+	@$(PY39) -m venv _build
+	( \
+			. _build/bin/activate; \
+			_build/bin/python -m pip install --upgrade pip; \
+			_build/bin/python -m pip install -r src/requirements.txt; \
+	)
+
+test:
+	@$(PY39) -m venv _build
+	( \
+			. _build/bin/activate; \
+			_build/bin/python -m pip install tox; \
+			_build/bin/python -m pip install --upgrade pip; \
+			_build/bin/python -m pip install -r tests/requirements-security.txt; \
+			_build/bin/python -m pip install -r tests/requirements-test.txt; \
+	)

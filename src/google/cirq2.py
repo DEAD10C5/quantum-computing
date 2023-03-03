@@ -1,13 +1,11 @@
 import cirq
 
+
 # Pick a qubit.
 qubit = cirq.GridQubit(0, 0)
 
-# Create a circuit
-circuit = cirq.Circuit(
-    cirq.X(qubit)**0.5,  # Square root of NOT.
-    cirq.measure(qubit, key='m')  # Measurement.
-)
+# Create a circuit that applies a square root of NOT gate, then measures the qubit.
+circuit = cirq.Circuit(cirq.X(qubit) ** 0.5, cirq.measure(qubit, key='m'))
 print("Circuit:")
 print(circuit)
 
