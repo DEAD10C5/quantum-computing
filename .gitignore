@@ -12,7 +12,7 @@ _build
 *.lot
 *.nav
 *.out
-*.pdf
+#*.pdf
 *.pyg
 *.snm
 *.synctex.gz
