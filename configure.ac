@@ -13,6 +13,7 @@ AC_CONFIG_COMMANDS([franklin-build],
 AM_PATH_PYTHON(3.8) # minimum version of Python
 AC_CONFIG_FILES(
   Makefile
+  src/aws/Makefile
   ) # Makefiles to generate, one per line
 PY39="python$PYTHON_VERSION" # define the python interpreter
 dnl LDFLAGS="$LDFLAGS -l$PY39"
