@@ -1,6 +1,6 @@
 dnl Process this file with autoconf
 AC_PREREQ([2.69])
-AC_INIT(quantum, 0.2, devsecfranklin@duck.com, https://github.com/devsecfranklin/quantum-computing)
+AC_INIT(quantum, 0.2, thedevilsvoice@dead10c5.org, https://github.com/devsecfranklin/quantum-computing)
 AC_CONFIG_MACRO_DIR(config/m4)
 AC_CONFIG_AUX_DIR(config)
 AM_INIT_AUTOMAKE
