@@ -2,10 +2,35 @@
 % !TeX encoding = UTF-8
 % !TeX spellcheck = en_US
 
+
+% https://quantumvillage.org/QCMU-font.html
+
 %\documentclass[14pt]{beamer}
 \documentclass[aspectratio=169]{beamer} % Other possible values are: 1610, 149, 54, 43 and 32. By default, it is to 128mm by 96mm(4:3)
 
-\include{preamble}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usefonttheme{serif}
+
+% no navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Text positioning
+\usepackage[absolute,overlay]{textpos}
+
+% https://hartwork.org/beamer-theme-matrix/
+\definecolor{bulletcolor}{RGB}{0,0,0} % RGB model is defined with values between 0 and 255
+\setbeamercolor{local structure}{fg=bulletcolor}
+\setbeamertemplate{itemize items}[circle]
+
+% make the hyperlinks blue
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+
+\usepackage{physics}
+
+%\usepackage{biblatex}
 
 % Table of Contents at Section start
 \AtBeginSection[]
